@@ -1,0 +1,10 @@
+springboot的yaml配置文件简单语法，注入值，配置文件编码问题
+
+@ConfigurationProperties和@Value注解的区别
+
+由于@ConfigurationProperties默认是加载全局配置文件，但是如果和springboot无关的配置向全局配置文件中加，会使全局配置文件太大，
+所以使用@PropertySource加载指定路径下的配置文件
+
+可以@ImportResource向容器添加spring配置文件来添加组件，比如beans配置文件，但是springboot不推荐这种方式，而是推荐使用配置类的方式添加组件
+
+可以使用占位符，在配置文件中配置一些值比如随机数，默认值

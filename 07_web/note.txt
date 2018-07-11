@@ -1,0 +1,32 @@
+webjar，以jar包的方式引入静态资源
+所有 /webjars/** ，都去 classpath:/META-INF/resources/webjars/ 找资源
+
+
+
+
+"/**" 访问当前项目的任何资源，都去（静态资源的文件夹）找映射==，静态资源保存路径
+"classpath:/META-INF/resources/", "classpath:/resources/",
+			"classpath:/static/", "classpath:/public/" };
+只要将静态资源放在这些目录下，就可以访问
+
+
+欢迎页； 静态资源文件夹下的所有index.html页面；被"/**"映射；==
+
+	localhost:8080/   找index页面
+
+
+所有的 **/favicon.ico  都是在静态资源文件下找；==
+
+
+thymeleaf，模板引擎,是springboot推荐的
+使用方法：只要我们把HTML页面放在classpath:/templates/，thymeleaf就能自动渲染；
+thymeleaf的语法
+
+
+扩展和全面接管SpringMVC的原理和配置
+
+
+国际化
+    1.编写国际化配置文件
+    2.SpringBoot自动配置好了管理国际化资源文件的组件，我们只需要配置一下路径:spring.messages.basename=i18n.login (包名.去除国家代码的文件名)
+    3.去页面获取值，使用themeleaf的#{}语法

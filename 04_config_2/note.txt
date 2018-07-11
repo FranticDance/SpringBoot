@@ -1,0 +1,13 @@
+springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件
+
+–file:./config/  注意这个路径是指项目的路径，不是模块的路径，即这里这个路径，是相对于SpringBoot这个项目，而不是里面的各个模块项目
+
+–file:./
+
+–classpath:/config/
+
+–classpath:/
+
+优先级由高到底，高优先级的配置会覆盖低优先级的配置；
+
+SpringBoot会从这四个位置全部加载主配置文件；互补配置；
