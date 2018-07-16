@@ -1,0 +1,7 @@
+注意：若要使用外部的Tomcat容器，这里要使用Tomcat8版本及以上，不能用Tomcat7，否则应用无法在Tomcat中启动
+
+使用外部Tomcat的步骤：
+1.在idea中配置好Tomcat8
+2.使用spring初始化插件创建工程，注意打包方式要选择war的方式。
+3.生成webapp目录，及web.xml(版本选择3.0以上)
+4.将项目部署到Tomcat中，启动
