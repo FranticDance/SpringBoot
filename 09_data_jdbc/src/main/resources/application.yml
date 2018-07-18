@@ -4,4 +4,8 @@ spring:
     password: 123
     url: jdbc:mysql://127.0.0.1:3306/springboot
     driver-class-name: com.mysql.jdbc.Driver
+    schema:
+      - classpath:department.sql
+    initialization-mode: always
+
 
