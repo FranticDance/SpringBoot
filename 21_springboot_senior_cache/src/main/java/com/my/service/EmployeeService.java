@@ -3,12 +3,11 @@ package com.my.service;
 import com.my.bean.Employee;
 import com.my.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
 @Service
-@CacheConfig(cacheNames = "emp")//CacheConfig注解就是抽取公共配置，免得每个方法上面都写重复的配置
+@CacheConfig(cacheNames = "emp",cacheManager = "empCacheManager")//CacheConfig注解就是抽取公共配置，免得每个方法上面都写重复的配置
 public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
