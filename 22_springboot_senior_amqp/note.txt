@@ -1,0 +1,10 @@
+Springboot整合消息中间件RabbitMq，前提是先安装RabbitMq，可以使用docker来安装
+然后定义交换器，队列，绑定规则
+然后使用SpringBoot初始化器来创建项目
+
+    1.Ctrl+n，搜索RabbitAutoConfiguration，看自动配置有什么。
+        自动配置了CachingConnectionFactory，属性绑定RabbitProperties
+        RabbitTemplate给RabbitMq发送和接收消息
+        AmqpAdmin ：RabbitMq系统管理功能组件。可以创建或者删除queue,exchange,binding
+
+     2.使用@EnableRabbit启动注解，使用@RabbitListener来配置监听
